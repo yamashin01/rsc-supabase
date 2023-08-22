@@ -1,5 +1,43 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Installation
+
+### install supabase
+
+```bash
+$ npm i @heroicons/react@2.0.17 @supabase/auth-helpers-nextjs@0.6.1 @supabase/supabase-js@2.21.0 zustand@4.3.8 supabase@1.55.1 date-fns@2.30.0
+```
+
+### set next.js@13.4.1
+
+```bash
+$ npm i next@13.4.1
+```
+
+### supabase login
+
+Use token in [supabase site](https://app.supabase.com/account/tokens)
+
+```bash
+$ npx supabase login
+You can generate an access token from https://app.supabase.com/account/tokens
+Enter your access token:
+Finished supabase login.
+```
+
+### supabase setup
+
+```bash
+$ npx supabase init
+Generate VS Code workspace settings? [y/N] y
+Open the rsc-supabase.code-workspace file in VS Code.
+Finished supabase init.
+$ npx supabase link --project-ref ydhdlarbipbwzblnephk
+Enter your database password (or leave blank to skip):
+Finished supabase link.
+$ npx supabase gen types typescript --linked > database.types.ts
+```
+
 ## Getting Started
 
 First, run the development server:

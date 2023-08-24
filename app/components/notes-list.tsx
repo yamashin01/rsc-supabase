@@ -8,8 +8,9 @@ async function fetchNotes() {
   //   await new Promise((resolve) => setTimeout(resolve, 2000))
   const res = await fetch(`${process.env.url}/rest/v1/notes?select=*`, {
     headers: new Headers({ apikey: process.env.apikey as string }),
-    // cache: 'no-store',
-    next: { revalidate: 10 },
+    // cache: "force-cache",        // SSR
+    cache: 'no-store', // SSG
+    // next: { revalidate: 10 }, // ISR
   })
   if (!res.ok) {
     throw new Error('Failed to fetch data in server')

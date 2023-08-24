@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import NotesList from './components/notes-list'
+import RefreshBtn from './components/refresh-btn'
 import Spinner from './components/spinner'
 import TimerCounter from './components/timer-counter'
 
@@ -13,6 +14,7 @@ export default function Page() {
           <NotesList />
         </Suspense>
         <TimerCounter />
+        <RefreshBtn />
       </div>
     </main>
   )
